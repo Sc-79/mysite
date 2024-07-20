@@ -6,5 +6,23 @@
 <body>
     <h1>{{ title }}</h1>
     <p>Welcome to the home page!</p>
+    <h1>{{ name }}</h1>
+    {% for n in clist %}
+    {% comment %} <div>{{forloop.revcounter0}}{{n}}</div> {% endcomment %}
+    <div>{{forloop.first}}{{n}}</div>
+    {%endfor%}
+
+    <table >
+        <tr>
+       <tr>Name</tr>     
+       <tr>Phone no</tr>     
+        </tr>
+        {% for d in student_details %}
+        <tr>
+            <td>{{d.name}}</td>
+            <td>{{d.phone}}</td>
+        </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>
