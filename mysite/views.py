@@ -21,6 +21,7 @@ def home(request):
         'title': 'home page sourav',
         'name':'Sourav chongrey',
         'clist':['php', 'java','Django'],
+        'numbers':[12,34,55,66,77,8,88,88,99,99],
         'student_details':[
             {'name':'sourav', 'phone':7001589285},
             {'name':'akash', 'phone':9609952986}
