@@ -11,5 +11,13 @@ def CourseDetails(request, courseid):
 
 #    def Home(request):
 #         return render(request, "index.html")
-def Home(request):
-    return render(request, "index.html")
+# def Home(request):
+#      data={
+#         'title':'home page'
+#      }
+#     return render(request, "index.html",data)
+def home(request):
+    data = {
+        'title': 'home page sourav'
+    }
+    return render(request, "index.html", data)
