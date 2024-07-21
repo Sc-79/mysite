@@ -1,43 +1,5 @@
-{% comment %} <!DOCTYPE html>
-<html>
-<head>
-    <title>{{ title }}</title>
-</head>
-<body>
-    <h1>{{ title }}</h1>
-    <p>Welcome to the home page!</p>
-    <h1>{{ name }}</h1>
-    {% for n in clist %}
-    {% comment %} <div>{{forloop.revcounter0}}{{n}}</div> {% endcomment %}
-    {% comment %} <div>{{forloop.first}}{{n}}</div>
-    {%endfor%}
-
-    <table >
-        <tr>
-       <tr>Name</tr>     
-       <tr>Phone no</tr>     
-        </tr>
-        {% for d in student_details %}
-        <tr>
-            <td>{{d.name}}</td>
-            <td>{{d.phone}}</td>
-        </tr>
-        {% endfor %}
-    </table>
-    {% if numbers|length > 0 %}
-    {% for n in numbers %}
-      {% if n > 40 %}
-    <div>{{n}}</div>
-    {% endif %}
-    {% endfor %}
-    {% else %}
-        NO data founnd
-        {% endif %}
-
-</body>
-</html> {% endcomment %} 
+{% load static %}
 <!-- templates/base.html -->
- {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,6 +26,11 @@
         {% block content %}
         {% endblock %}
     </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Adventure. All rights reserved.</p>
+        </div>
+    </footer>
     <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

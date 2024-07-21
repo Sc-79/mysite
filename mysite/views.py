@@ -1,13 +1,13 @@
-from django.http import HttpResponse
-from django.shortcuts import render
+# from django.http import HttpResponse
+# from django.shortcuts import render
  
-def aboutUs(request):
-    return HttpResponse("About Us Page")
-def Course(request):
-    return HttpResponse("my course")
+# def aboutUs(request):
+#     return HttpResponse("About Us Page")
+# def Course(request):
+#     return HttpResponse("my course")
 
-def CourseDetails(request, courseid):
-    return HttpResponse(f"{courseid} - Welcome to My Course")
+# def CourseDetails(request, courseid):
+#     return HttpResponse(f"{courseid} - Welcome to My Course")
 
 #    def Home(request):
 #         return render(request, "index.html")
@@ -16,15 +16,28 @@ def CourseDetails(request, courseid):
 #         'title':'home page'
 #      }
 #     return render(request, "index.html",data)
+# def home(request):
+#     data = {
+#         'title': 'home page sourav',
+#         'name':'Sourav chongrey',
+#         'clist':['php', 'java','Django'],
+#         'numbers':[12,34,55,66,77,8,88,88,99,99],
+#         'student_details':[
+#             {'name':'sourav', 'phone':7001589285},
+#             {'name':'akash', 'phone':9609952986}
+#         ]
+#     }
+#     return render(request, "index.html", data)
+from django.shortcuts import render
+
 def home(request):
-    data = {
-        'title': 'home page sourav',
-        'name':'Sourav chongrey',
-        'clist':['php', 'java','Django'],
-        'numbers':[12,34,55,66,77,8,88,88,99,99],
-        'student_details':[
-            {'name':'sourav', 'phone':7001589285},
-            {'name':'akash', 'phone':9609952986}
-        ]
-    }
-    return render(request, "index.html", data)
+    return render(request, "home.html")
+
+def aboutUs(request):
+    return render(request, "about.html")
+
+def contact(request):
+    return render(request, "contact.html")
+
+def services(request):
+    return render(request, "services.html")
